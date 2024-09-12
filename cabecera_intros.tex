@@ -1,0 +1,73 @@
+	\documentclass[aspectratio=1610,10pt]{beamer}
+\usepackage[utf8]{inputenc}
+%\usepackage{hyperref}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{lmodern}
+%\usepackage{enumitem}
+\usepackage{enumerate}
+%\usepackage{wrapfig}
+%\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{graphicx}
+%\usepackage{soul}
+\usepackage{xcolor}
+\usepackage[table]{colortbl}
+
+% fonts ----------------
+\usepackage[T1]{fontenc}
+%\usepackage[sfdefault]{AlegreyaSans}
+% The 'sfdefault' option to make the base font sans serif
+\renewcommand*\oldstylenums[1]{{\AlegreyaSansOsF #1}}
+% fonts ----------------
+
+% Background ------------------------------------
+\usebackgroundtemplate{
+	\tikz[overlay,remember picture] \node[opacity=0.15, at=(current page.center)] {
+		\includegraphics[height=\paperheight,width=\paperwidth]{../images/fondo2}};
+}
+% Background ------------------------------------
+
+% Theme choice:
+\usetheme{CambridgeUS}
+\usecolortheme{dove}
+
+% Definiendo colores ----------------------------
+\definecolor{pantoneblack}{RGB}{30,30,30}
+\definecolor{pantone200}{RGB}{183,18,52}
+\definecolor{pantone021}{RGB}{254,80,0} %naranja
+\definecolor{oro}{RGB}{155,137,66}
+\definecolor{plata}{RGB}{151,148,146}
+\definecolor{rosa}{RGB}{253,233,235}
+\definecolor{posit}{RGB}{254,249,231}
+% Actualidad economica: eedbdb 238 - 219 - 219
+% "" amario: 253 - 235 - 196
+%\definecolor{fondo}{RGB}{200,200,200}
+\setbeamercolor{title}{fg=red!80!black,bg=red!20!white}
+\setbeamercolor{title}{fg=white,bg=pantone200}
+\setbeamercolor{frametitle}{fg=pantoneblack}
+\setbeamercolor{structure}{fg=oro}
+\setbeamercolor{block title}{fg=white,bg=pantoneblack}
+\setbeamercolor{alertblock title}{bg=pantoneblack}
+\setbeamercolor{block title example}{bg=plata!50,fg=plata!140}
+\setbeamercolor{block body example}{bg=plata!10}
+\setbeamercolor{block title alerted}{bg=pantone200,fg=white}
+\setbeamercolor{block body alerted}{bg=pantone200!10}
+% Definiendo colores ----------------------------
+
+% Fondo ------
+
+% https://biblioteca.ucm.es/edicionweb/bancos-de-imagenes
+
+% Fondo --------
+
+% Title page details: 
+%\subtitle{(Apuntes de repaso)}
+\author[Francisco Gárate]{Francisco Gárate Santiago - fgarate@ucm.es}
+\institute{UCM}
+\date{Master en Ciencias Actuariales y Financieras (2024-2025)}
+%\logo{\includegraphics[scale=0.2]{/home/paco/Dropbox/CURSOS/IFRS17/images/Logo.png}}
+\logo{\includegraphics[scale=0.2]{../images/Logo.png}}
