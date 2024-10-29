@@ -1,7 +1,8 @@
-	\documentclass[aspectratio=1610,10pt]{beamer}
+\documentclass[aspectratio=1610,12pt]{beamer}
+\usepackage{setspace}
 \usepackage[utf8]{inputenc}
 %\usepackage{hyperref}
-\usepackage{babel}
+\usepackage[spanish]{babel}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{listings}
@@ -14,8 +15,12 @@
 \usepackage{tikz}
 \usepackage{graphicx}
 %\usepackage{soul}
+%\usepackage[dvipsnames]{xcolor}
 \usepackage{xcolor}
-\usepackage[table]{colortbl}
+%\usepackage[table]{colortbl}
+%\usepackage{applekeys}
+%\usepackage[default]{opensans}
+%\usepackage{lato} 
 
 % fonts ----------------
 \usepackage[T1]{fontenc}
@@ -26,8 +31,8 @@
 
 % Background ------------------------------------
 \usebackgroundtemplate{
-	\tikz[overlay,remember picture] \node[opacity=0.15, at=(current page.center)] {
-		\includegraphics[height=\paperheight,width=\paperwidth]{../images/fondo2}};
+	\tikz[overlay,remember picture] \node[opacity=0.05, at=(current page.center)] {
+		\includegraphics[height=\paperheight,width=\paperwidth]{../images/fondo_ucm}};
 }
 % Background ------------------------------------
 
@@ -59,10 +64,28 @@
 % Definiendo colores ----------------------------
 
 % Fondo ------
-
 % https://biblioteca.ucm.es/edicionweb/bancos-de-imagenes
 
-% Fondo --------
+% --------
+
+% Comandos -------------
+\providecommand{\consola}[1]{\texttt{\colorbox{pantoneblack}{\textcolor{white}{#1}}}}
+\lstset{upquote=true}
+% -----------------------
+
+% Haz que las secciones tengan el mismo formato
+\setbeamerfont{section title}{size=\LARGE, series=\bfseries}
+%\setbeamercolor{section title}{fg=blue}
+\setbeamertemplate{section page}{
+	\begin{centering}
+		\usebeamerfont{section title}
+		\usebeamercolor[fg]{section title}
+		\insertsection\par
+	\end{centering}
+}
+
+
+
 
 % Title page details: 
 %\subtitle{(Apuntes de repaso)}
