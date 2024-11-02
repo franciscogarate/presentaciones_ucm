@@ -48,9 +48,14 @@
 \definecolor{plata}{RGB}{151,148,146}
 \definecolor{rosa}{RGB}{253,233,235}
 \definecolor{posit}{RGB}{254,249,231}
-% Actualidad economica: eedbdb 238 - 219 - 219
-% "" amario: 253 - 235 - 196
-%\definecolor{fondo}{RGB}{200,200,200}
+% colores listing
+\definecolor{gray95}{gray}{.95}
+\definecolor{keywords}{RGB}{255,0,90}
+\definecolor{comments}{RGB}{0,0,113}
+\definecolor{red}{RGB}{160,0,0}
+\definecolor{green}{RGB}{0,150,0}
+\definecolor{marino}{RGB}{18,10,143}
+% colores beamer
 \setbeamercolor{title}{fg=red!80!black,bg=red!20!white}
 \setbeamercolor{title}{fg=white,bg=pantone200}
 \setbeamercolor{frametitle}{fg=pantoneblack}
@@ -84,8 +89,47 @@
 	\end{centering}
 }
 
+\setbeamersize{text margin left=0.75cm, text margin right=0.75cm}
 
+% Listing ---------------------------------------
+%\lstset{ 
 
+\lstset{
+	% Configuración de colores ---
+	backgroundcolor=\color{gray95}, % Color de fondo suave
+	basicstyle=\ttfamily\footnotesize,
+	keywordstyle=\color{keywords}\bfseries, % Estilo de las palabras clave
+	stringstyle=\ttfamily\color{green},%Color de las cadenas de texto
+	commentstyle=\color{green}, % Color de los comentarios
+	identifierstyle=\color{marino}, % Estilo identificadores de variables
+	rulesepcolor=\color{pantoneblack},
+	% Formato de números de línea ----------
+	numbers=left, % none
+	numberstyle=\scriptsize\color{gray}, % Estilo de los números de línea
+	stepnumber=1, % Cada línea tiene número
+	numbersep=10pt, % Separación de los números de línea
+	%numberfirstline = false,
+	% Características del código ---
+	tabsize=2, % Tamaño de la tabulación
+	showspaces=false, % No mostrar espacios
+	showstringspaces=false, % No mostrar espacios en cadenas de texto
+	showtabs=false, % No mostrar tabulaciones
+	frame=single, % Poner un borde alrededor del código / Ltb - no ponerlo
+	%framerule=0pt,
+	breaklines=true, % Permitir que las líneas largas se dividan
+	breakatwhitespace=true, % Dividir en espacios cuando sea posible
+	captionpos=b, % Posición de la leyenda
+	keepspaces=true, % Mantener espacios
+	% Otros -----
+	aboveskip=0.25cm,
+	escapeinside={(*@}{@*)}, % Permitir comandos LaTeX en el código
+	morekeywords={*,...} % Añadir palabras clave si es necesario
+%	framextopmargin=2pt,
+%	framexbottommargin=2pt,
+%	framexleftmargin=0cm,
+%	framesep=0pt,
+%	rulesep=.4pt,
+}
 
 % Title page details: 
 %\subtitle{(Apuntes de repaso)}
