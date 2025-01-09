@@ -5,6 +5,7 @@
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
 \usepackage{amssymb}
+%\usepackage[procnames]{listings}
 \usepackage{listings}
 \usepackage{textcomp}
 \usepackage{lmodern}
@@ -56,9 +57,8 @@
 \definecolor{green}{RGB}{0,150,0}
 \definecolor{marino}{RGB}{18,10,143}
 % colores beamer
-\setbeamercolor{title}{fg=red!80!black,bg=red!20!white}
-\setbeamercolor{title}{fg=white,bg=pantone200}
-\setbeamercolor{frametitle}{fg=pantoneblack}
+\setbeamercolor{title}{fg=white!90!red,bg=pantone200!90}
+\setbeamercolor{frametitle}{fg=pantone200!80!black}
 \setbeamercolor{structure}{fg=oro}
 \setbeamercolor{block title}{fg=white,bg=pantoneblack}
 \setbeamercolor{alertblock title}{bg=pantoneblack}
@@ -92,8 +92,6 @@
 \setbeamersize{text margin left=0.75cm, text margin right=0.75cm}
 
 % Listing ---------------------------------------
-%\lstset{ 
-
 \lstset{
 	% Configuración de colores ---
 	backgroundcolor=\color{gray95}, % Color de fondo suave
@@ -130,6 +128,26 @@
 %	framesep=0pt,
 %	rulesep=.4pt,
 }
+\setbeamertemplate{navigation symbols}{
+	\insertslidenavigationsymbol
+	%\insertframenavigationsymbol
+	%\insertsubsectionnavigationsymbol
+	%\insertsectionnavigationsymbol
+	%\insertdocnavigationsymbol
+	%\insertbackfindforwardnavigationsymbol
+}
+\addtobeamertemplate{navigation symbols}{}{%
+	\usebeamerfont{footline}%
+	\usebeamercolor[red]{footline}%
+	\hspace{2em}%
+	\insertframenumber %/\inserttotalframenumber
+}
+%\setlength{\parindent}{0pt} %Quitar sangrado primera linea
+%\lstdefinestyle{consola}
+%{basicstyle=\footnotesize, backgroundcolor=\color{gray75}} %\scriptsize\bf\ttfamily
+%\lstdefinestyle{Python}
+%{language=Python}
+\providecommand{\consola}[1]{\footnotesize\normalsize\texttt{\colorbox{negro_w}{\textcolor{white}{#1}}}}
 
 % Title page details: 
 %\subtitle{(Apuntes de repaso)}
